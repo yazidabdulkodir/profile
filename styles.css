@@ -1,0 +1,539 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ebebeb;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background: url("icon/123.jpg") repeat; /* Ganti dengan path ke gambar pola */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Bayangan halus */
+}
+
+.logo {
+  flex: 1; /* Memberi ruang untuk logo di sisi kiri */
+  margin-left: 65px;
+}
+
+.logo-img {
+  height: 35px; /* Sesuaikan tinggi logo */
+}
+
+.title {
+  flex: 1; /* Memberi ruang untuk title di sisi kanan */
+  color: #2e8b57; /* Warna teks judul */
+  margin-right: 100px;
+  font-weight: bold;
+  font-size: 20px; /* Ukuran font judul */
+  flex: 1; /* Judul akan mengambil ruang yang tersedia */
+  text-align: right; /* Judul sejajar di sebelah kanan */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Bayangan pada teks */
+}
+
+/* Layout untuk container utama */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align content di atas agar sidebar tidak full-height */
+  padding: 80px 50px 20px 50px; /* Tambahkan padding atas untuk menghindari navbar */
+}
+
+.main-content {
+  width: 70%; /* Atur ukuran konten utama */
+  padding: 0; /* Hilangkan padding di konten utama */
+  margin: 0; /* Hilangkan margin agar mendempet dengan sidebar */
+}
+
+.sidebar {
+  width: 30%; /* Lebar sidebar */
+  margin-left: 0; /* Hilangkan margin kiri agar mendempet */
+  margin-right: 50px;
+  margin-top: 0; /* Sesuaikan margin-top untuk responsivitas */
+}
+
+/* Bagian iklan */
+.ad-section {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 0px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.ad-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover; /* Gambar akan mengisi area tanpa merusak proporsi */
+}
+
+.ad-section h3 {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+/* Link sosial media */
+.social-links {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Jarak atas untuk social links */
+}
+
+.social-links h3 {
+  margin-top: 0;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links ul li {
+  margin: 10px 0;
+  display: flex; /* Flexbox untuk penataan horizontal */
+  align-items: center; /* Pusatkan ikon dan teks secara vertikal */
+}
+
+.social-links span {
+  margin-right: 10px; /* Jarak antara ikon dan nama */
+  flex-grow: 1; /* Mengisi ruang kosong */
+}
+
+.social-button {
+  background-color: #2e8b57; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  padding: 5px 10px; /* Jarak dalam tombol */
+  border: none; /* Menghapus border */
+  border-radius: 5px; /* Sudut membulat */
+  text-decoration: none; /* Menghapus garis bawah */
+  transition: all 0.3s; /* Transisi untuk efek hover */
+}
+
+.social-button:hover {
+  background-color: #98fb98; /* Warna saat hover */
+  color: #333;
+}
+
+.social-icon {
+  width: 24px; /* Lebar ikon */
+  height: 24px; /* Tinggi ikon */
+  margin-right: 10px; /* Jarak antara ikon dan teks */
+}
+
+/* Profil Container */
+.profile-container {
+  max-width: 800px;
+  margin: 20px auto; /* Menambahkan margin-top 20px */
+  margin-top: 0px; /* Tambahan jarak antara profile section dan bagian atas layar */
+}
+
+/* Cover Photo Style */
+.cover-photo {
+  width: 100%;
+  height: 200px;
+  background-image: url("img_profile/cover.gif");
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: relative;
+}
+
+/* Section Wrapper */
+.section-wrapper {
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px; /* Adjust the margin-top to move content below the cover photo */
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+  border: 5px solid white; /* Border around profile photo */
+  position: absolute;
+  top: -50px; /* Move profile photo to overlap with the section */
+  left: 15px; /* Adjust position to match alignment */
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-details {
+  margin-left: 170px; /* Adjust to leave space for profile photo */
+  margin-bottom: 15px;
+}
+
+.profile-details h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  margin-top: -7%;
+}
+
+.profile-details p {
+  margin: 5px 0;
+  color: #777;
+}
+
+.profile-details span {
+  color: #0073b1;
+}
+
+/* Section Titles */
+.section-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section-content p {
+  color: #555;
+}
+
+.experience,
+.education {
+  margin-bottom: 20px;
+}
+
+.experience h4,
+.education h4,
+.certificates h4 {
+  margin: 5px 0;
+  color: #2e8b57;
+}
+
+.experience .date,
+.education .date,
+.certificates .date {
+  font-style: italic;
+}
+
+.section-content span {
+  font-weight: 600;
+}
+
+.experience p,
+.education p,
+.certificates p {
+  color: #555;
+}
+
+/* Post Section Styling */
+.post-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px; /* Jarak antar post item */
+}
+
+.post-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Agar border-radius bekerja pada semua sudut */
+}
+
+.post-image img {
+  width: 100%;
+  height: 250px; /* Ukuran tetap untuk gambar */
+  object-fit: cover; /* Memastikan gambar terisi penuh */
+}
+
+.post-description {
+  padding: 10px; /* Ruang di dalam post */
+}
+
+.post-description p {
+  color: #333; /* Warna teks */
+  margin: 0;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: transparent; /* Warna footer */
+  color: rgb(107, 107, 107); /* Warna teks footer */
+  position: relative;
+  bottom: 0; /* Pastikan footer tetap di bawah */
+  width: 100%; /* Lebar penuh */
+}
+
+/* Media Queries */
+
+/* Untuk tampilan tablet dan lebih kecil */
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 80px 30px 20px 30px; /* Kurangi padding horizontal */
+  }
+
+  .sidebar {
+    margin-right: 30px; /* Kurangi margin kanan */
+  }
+
+  .title {
+    font-size: 18px; /* Sesuaikan ukuran font */
+    margin-right: 50px; /* Kurangi margin kanan */
+  }
+
+  .logo {
+    margin-left: 30px; /* Kurangi margin kiri */
+  }
+
+  .profile-details {
+    margin-left: 170px; /* Tetap sesuai */
+  }
+
+  .profile-details h2 {
+    font-size: 22px; /* Sesuaikan ukuran font */
+  }
+}
+
+/* Untuk tampilan mobile dengan ukuran layar lebih kecil */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 15px;
+  }
+
+  .main-container {
+    flex-direction: column; /* Membuat layout kolom tunggal */
+    align-items: center;
+    padding: 80px 15px 20px 15px; /* Sesuaikan padding */
+  }
+
+  .main-content,
+  .sidebar {
+    width: 100%; /* Membuat kedua kolom memenuhi lebar layar */
+    margin: 0;
+    padding: 10px;
+  }
+
+  .sidebar {
+    margin-right: 0; /* Hilangkan margin kanan */
+    margin-top: 20px; /* Tambahkan jarak atas */
+  }
+
+  .profile-container {
+    max-width: 100%; /* Full width untuk konten utama */
+    margin-top: 20px; /* Sesuaikan margin-top */
+  }
+
+  .profile-header {
+    flex-direction: column; /* Mengubah layout profil menjadi kolom */
+    align-items: center; /* Center align */
+    margin-top: 20px;
+  }
+
+  .profile-photo {
+    position: static; /* Hilangkan absolute positioning */
+    margin: 0 0 15px 0; /* Tambahkan margin bawah */
+  }
+
+  .profile-details {
+    margin-left: 0; /* Hilangkan margin kiri */
+    text-align: center; /* Center align teks */
+  }
+
+  .profile-details h2 {
+    margin-top: 0; /* Hilangkan margin-top negatif */
+    font-size: 20px;
+  }
+
+  .section-wrapper {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .experience h4,
+  .education h4,
+  .certificates h4 {
+    font-size: 16px;
+  }
+
+  .post-section {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px; /* Kurangi jarak antar post */
+  }
+
+  .post-image img {
+    height: 150px; /* Kurangi tinggi gambar */
+  }
+
+  .post-description {
+    padding: 8px;
+  }
+
+  .post-description p {
+    font-size: 14px;
+  }
+
+  .social-links h3 {
+    font-size: 18px;
+  }
+
+  .social-links ul li {
+    flex-direction: column; /* Agar ikon dan teks tampil dalam kolom */
+    align-items: flex-start; /* Align kiri */
+  }
+
+  .social-links span {
+    margin-right: 0;
+    margin-bottom: 5px; /* Jarak antara nama dan tombol */
+    flex-grow: 0;
+  }
+
+  .social-button {
+    padding: 7px 15px; /* Membesarkan tombol */
+    font-size: 14px;
+  }
+
+  .social-icon {
+    margin-right: 0;
+    margin-bottom: 5px; /* Jarak antara ikon dan nama */
+  }
+
+  footer {
+    font-size: 14px; /* Sesuaikan ukuran font footer */
+  }
+}
+
+/* Untuk tampilan mobile dengan ukuran layar sangat kecil */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: row; /* Pastikan tetap horizontal pada layar kecil */
+    align-items: center; /* Center align */
+    padding: 8px 10px;
+  }
+
+  .logo {
+    margin-left: 10px;
+  }
+
+  .title {
+    font-size: 1.2rem; /* Sesuaikan ukuran logo jika diperlukan */
+    text-align: center;
+    margin: 10px 0;
+    margin-right: 0;
+  }
+
+  .main-container {
+    padding: 80px 10px 20px 10px; /* Kurangi padding horizontal */
+  }
+
+  .main-content {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .ad-section {
+    margin-top: -50px;
+    margin-bottom: -10px;
+  }
+
+  .cover-photo {
+    height: 100px;
+  }
+
+  .profile-container {
+    margin-top: -20px;
+  }
+
+  .profile-photo {
+    width: 100px; /* Ubah ukuran foto profil lebih kecil */
+    height: 100px;
+    margin-top: -90px;
+    margin-bottom: 0;
+    margin-right: 200px; /* Hilangkan margin kanan */
+  }
+
+  .profile-details {
+    text-align: left; /* Tetap biarkan di kiri */
+    margin-left: 5px;
+  }
+
+  .profile-details h2 {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .experience h4,
+  .education h4,
+  .certificates h4 {
+    font-size: 14px;
+  }
+
+  .post-section {
+    grid-template-columns: 1fr; /* Satu kolom untuk layar sangat kecil */
+    gap: 10px;
+  }
+
+  .post-image img {
+    height: 200px; /* Kurangi tinggi gambar */
+  }
+
+  .post-description p {
+    font-size: 14px;
+  }
+
+  .social-links h3 {
+    font-size: 16px;
+  }
+
+  .social-links ul li {
+    flex-direction: row; /* Tetap di baris, tidak perlu kolom */
+    justify-content: space-between; /* Ikon + teks di kiri, tombol di kanan */
+  }
+
+  .social-links ul li span {
+    margin-left: 0px;
+    margin-top: 3px;
+  }
+
+  .social-button {
+    padding: 5px 10px; /* Kurangi padding tombol */
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 12px; /* Sesuaikan ukuran font footer */
+  }
+}
