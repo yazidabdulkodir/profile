@@ -314,7 +314,7 @@ body {
 
 .carousel .image-wrapper img {
   width: 100%;
-  height: 250px; /* Ukuran tetap untuk gambar */
+  height: auto; /* Ukuran tetap untuk gambar */
   object-fit: cover;
   flex-shrink: 0; /* Pastikan gambar tidak menyusut */
 }
